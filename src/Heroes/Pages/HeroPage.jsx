@@ -5,9 +5,11 @@ import { getHeroeById } from '../Helpers/getHeroeById';
 export const HeroPage = () => {
 
   const {id, ...sprend } = useParams(); 
+  
   const navigate = useNavigate()
 
   const heroe = useMemo(() => getHeroeById( id ), [id] ) 
+ 
   const onNavigateBack= () =>{
     navigate(-1)
   }
